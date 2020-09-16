@@ -1,0 +1,14 @@
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/bin/Release/netstandard2.0/GostosoDemaisApp.deps.json
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/bin/Release/netstandard2.0/GostosoDemaisApp.dll
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/bin/Release/netstandard2.0/ref/GostosoDemaisApp.dll
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/bin/Release/netstandard2.0/GostosoDemaisApp.pdb
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/obj/Release/netstandard2.0/App.xaml.g.cs
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/obj/Release/netstandard2.0/Views/LoginView.xaml.g.cs
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/obj/Release/netstandard2.0/Views/RecipesListView.xaml.g.cs
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/obj/Release/netstandard2.0/GostosoDemaisApp.AssemblyInfoInputs.cache
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/obj/Release/netstandard2.0/GostosoDemaisApp.AssemblyInfo.cs
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/obj/Release/netstandard2.0/GostosoDemaisApp.csproj.CoreCompileInputs.cache
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/obj/Release/netstandard2.0/XamlC.stamp
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/obj/Release/netstandard2.0/GostosoDemaisApp.dll
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/obj/Release/netstandard2.0/ref/GostosoDemaisApp.dll
+/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/obj/Release/netstandard2.0/GostosoDemaisApp.pdb
