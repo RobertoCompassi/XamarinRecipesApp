@@ -18,7 +18,7 @@ namespace GostosoDemaisApp.Views
 
             vm.EnterApp += async () =>
             {
-                await Navigation.PushAsync(new RecipesListView());
+                await Navigation.PushAsync(new MyRecipesList());
             };
         }
 
@@ -27,6 +27,10 @@ namespace GostosoDemaisApp.Views
             await Navigation.PushAsync(new NewAccountView());
         }
 
-        
+        async void btnIrRceitas_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new MyRecipesList());
+        }
+
     }
 }

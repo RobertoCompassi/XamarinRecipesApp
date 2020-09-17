@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "UHayHNplDFwQI65tagLXbHStc0n1DwQ0yGtgY57d3AtygpZSh/KN6jO0G5qySAP73B+w5irLDDQVD5WJ44lQ8Q==",
+  "dgSpecHash": "1HuqUbR1JSATtH4jTX4f/+c2U9EoFEYcUl+efQeMEdwHUazxdKuFJbJwD39jBm3xDK95OqH9Tat1mcbBy4oU1w==",
   "success": true,
   "projectFilePath": "/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/GostosoDemaisApp.csproj",
   "expectedPackageFiles": [
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/robertocompassi/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
     "/Users/robertocompassi/.nuget/packages/sqlite/3.13.0/sqlite.3.13.0.nupkg.sha512",
     "/Users/robertocompassi/.nuget/packages/sqlite-net-pcl/1.7.335/sqlite-net-pcl.1.7.335.nupkg.sha512",
     "/Users/robertocompassi/.nuget/packages/sqlitepclraw.bundle_green/2.0.3/sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",

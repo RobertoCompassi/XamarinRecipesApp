@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("GostosoDemaisApp.Views.RecipesListView.xaml", "Views/RecipesListView.xaml", typeof(global::GostosoDemaisApp.Views.RecipesListView))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("GostosoDemaisApp.Views.RecipeDetails.xaml", "Views/RecipeDetails.xaml", typeof(global::GostosoDemaisApp.Views.RecipeDetails))]
 
 namespace GostosoDemaisApp.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/RecipesListView.xaml")]
-    public partial class RecipesListView : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/RecipeDetails.xaml")]
+    public partial class RecipeDetails : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(RecipesListView));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(RecipeDetails));
         }
     }
 }

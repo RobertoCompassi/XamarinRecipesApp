@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace GostosoDemaisApp.Views
 {
-    public partial class RecipesListView : ContentPage
+    public partial class RecipeDetails : ContentPage
     {
-        public RecipesListView()
+        public RecipeDetails()
         {
             InitializeComponent();
         }

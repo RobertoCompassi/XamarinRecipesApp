@@ -61,6 +61,8 @@
                 FontSize="18"
                 CornerRadius="10"
                 Margin="0, 0, 0 ,10"/>
+
+                <Button x:Name="btnIrRceitas" Text="Receitas" Clicked="btnIrRceitas_Clicked"></Button>
         </StackLayout>
         </Frame>
     </StackLayout>
