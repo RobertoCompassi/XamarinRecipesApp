@@ -10,6 +10,7 @@ namespace GostosoDemaisApp
     public partial class App : Application
     {
         static AccountData accountsDatabase;
+        static RecipeData recipesDatabase;
 
         public static AccountData AccountsDatabase
         {
@@ -20,6 +21,18 @@ namespace GostosoDemaisApp
                     accountsDatabase = new AccountData(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Accounts.db3"));
                 }
                 return accountsDatabase;
+            }
+        }
+
+        public static RecipeData RecipesDatabase
+        {
+            get
+            {
+                if (recipesDatabase == null)
+                {
+                    recipesDatabase = new RecipeData(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Recipes.db3"));
+                }
+                return recipesDatabase;
             }
         }
 

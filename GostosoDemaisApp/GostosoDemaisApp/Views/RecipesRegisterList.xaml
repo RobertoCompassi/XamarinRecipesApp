@@ -6,66 +6,97 @@
     x:Class="GostosoDemaisApp.Views.RecipesRegisterList"
     Title="Receitas Online"
     BackgroundColor="#f4f4f4">
-        <StackLayout Padding="15">
-            <Frame
+    <StackLayout Padding="15">
+        <Frame
                 x:Name="loader"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent">
-                <StackLayout>
-                    <ActivityIndicator
+            <StackLayout>
+                <ActivityIndicator
                     IsRunning="True"
                     Margin="0, 100, 0,0"/>
-                    <Label
+                <Label
                         Text="Buscando receitas na API..."
                         FontSize="18"
                         HorizontalTextAlignment="Center"></Label>
-                </StackLayout>
-            </Frame>
+            </StackLayout>
+        </Frame>
 
-            <ListView
+        <ListView
                 x:Name="listViewRecipes"
                 ItemsSource="{Binding recipesFromServer}"
                 HasUnevenRows="true"
                >
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="models:Recipe">
-                        <ViewCell>
-                            <Frame
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:Recipe">
+                    <ViewCell>
+                        <Frame
                                 BackgroundColor="#fff"
                                 Margin="0,0,0,7"
                                 BorderColor="#d5d5d5"
                                 HasShadow="True"
                                 CornerRadius="5"
                                 Padding="10">
-                                <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Vertical">
 
-                                    <StackLayout
-                                        Orientation="Horizontal">
-                                        <Image Source="cook.png"
-                                               WidthRequest="60"/>
-                                        <StackLayout
+                                <StackLayout
                                         Orientation="Vertical"
                                         HorizontalOptions="StartAndExpand"
                                         VerticalOptions="FillAndExpand">
-                                            <Label
-                                            FontSize="22"
+                                    <Label
+                                            FontSize="20"
+                                            FontAttributes="Bold"
                                             TextColor="#000"
                                             Text="{Binding Name}"
                                             HorizontalOptions="FillAndExpand"
+                                        Margin="0,0,0,10"
                                             />
-                                        </StackLayout>
-                                    </StackLayout>
-                                    <Button
+                                    <Label
+                                            FontSize="16"
+                                        FontAttributes="Bold"
+                                            TextColor="#000"
+                                            Text="Ingredientes:"
+                                            HorizontalOptions="FillAndExpand"
+                                        Margin="0,0,0,5"
+                                            />
+                                    <Label
+                                            FontSize="14"
+                                            TextColor="#000"
+                                            Text="{Binding Ingredients}"
+                                            HorizontalOptions="FillAndExpand"
+                                        Margin="0,0,0,10"
+                                            />
+
+                                    <Label
+                                            FontSize="16"
+                                        FontAttributes="Bold"
+                                            TextColor="#000"
+                                            Text="Modo de Preparo:"
+                                            HorizontalOptions="FillAndExpand"
+                                        Margin="0,0,0,5"
+                                            />
+                                    <Label
+                                            FontSize="14"
+                                            TextColor="#000"
+                                            Text="{Binding Steps}"
+                                            HorizontalOptions="FillAndExpand"
+                                        Margin="0,0,0,10"
+                                            />
+                                </StackLayout>
+                                <Button
                                         Text="Salvar Receita"
+                                        BackgroundColor="#2c84f0" 
+                                        TextColor="#fff"
+                                        FontAttributes="Bold"
                                         CommandParameter="{Binding .}"
                                         x:Name="btnSaveRecipe"
                                         Clicked="btnSaveRecipe_Clicked"></Button>
-                                    </StackLayout>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            
-        </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
 </ContentPage>

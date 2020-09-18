@@ -1,8 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="GostosoDemaisApp.Views.RecipeDetails"
-    >
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GostosoDemaisApp.Views.RecipeDetails" Title="Detalhes da Receita">
+    <ScrollView >
+
     
+    <Frame Margin="10, 10, 10, 20" BackgroundColor="#fff" HasShadow="True" CornerRadius="5" Padding="10">
+      <StackLayout Orientation="Vertical">
+         <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
+            <Label x:Name="titleRecipe" FontSize="20" FontAttributes="Bold" TextColor="#000" HorizontalOptions="FillAndExpand" Margin="0,0,0,10" />
+            <Label FontSize="16" FontAttributes="Bold" TextColor="#000" Text="Ingredientes:" HorizontalOptions="FillAndExpand" Margin="0,0,0,5" />
+            <Label x:Name="textIngredients" FontSize="14" TextColor="#000" HorizontalOptions="FillAndExpand" Margin="0,0,0,10" />
+            <Label FontSize="16" FontAttributes="Bold" TextColor="#000" Text="Modo de Preparo:" HorizontalOptions="FillAndExpand" Margin="0,0,0,5" />
+            <Label x:Name="textSteps" FontSize="14" TextColor="#000" HorizontalOptions="FillAndExpand" Margin="0,0,0,10" />
+         </StackLayout>
+         <Button
+             Text="MARCAR COMO FAVORITA"
+             BackgroundColor="#2c84f0"
+             TextColor="#fff"
+             FontAttributes="Bold"
+             x:Name="btnChangeFavorite"
+             Clicked="btnChangeFavorite_Clicked"
+             />
+      </StackLayout>
+   </Frame>
+        </ScrollView>
 </ContentPage>

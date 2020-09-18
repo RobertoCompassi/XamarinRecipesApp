@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Windows.Input;
 using GostosoDemaisApp.Models;
+using GostosoDemaisApp.Services;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 
@@ -20,8 +21,6 @@ namespace GostosoDemaisApp.Views
             InitializeComponent();
 
             GetRecipesListFromAPIAsync();
-
-            
 
         }
 
@@ -46,8 +45,8 @@ namespace GostosoDemaisApp.Views
                             recipesFromServer.Add(new Recipe {
                                 Id = 0,
                                 Name = recipe.receita,
-                                Ingredients = recipe.ingredientes,
-                                Steps = recipe.preparo
+                                Ingredients = FormatRecipe.FormatIngredients(recipe.ingredientes, null),
+                                Steps = FormatRecipe.FormatIngredients(recipe.preparo, null),
                             });
                         }
                     }
@@ -68,10 +67,25 @@ namespace GostosoDemaisApp.Views
             }
         }
 
-        void btnSaveRecipe_Clicked(System.Object sender, System.EventArgs e)
+        async void btnSaveRecipe_Clicked(System.Object sender, System.EventArgs e)
         {
-            var item = ((Button)sender).CommandParameter;
-            Console.Write("oi");
+            try
+            {
+                Recipe recipeFromAPI = ((Recipe)((Button)sender).CommandParameter);
+                if (recipeFromAPI != null)
+                {
+                    recipeFromAPI.IsFavorite = false;
+                    int result = await App.RecipesDatabase.SaveAsync(recipeFromAPI);
+                    if(result == 1)
+                    {
+                        DisplayAlert("Receita Salva!", "Essa receita foi salva na sua base local.", "Continuar");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Erro ao salvar", "Erro ao tentar salvar a receita na base local, " + ex.Message, "Ok");
+            }
         }
 
     }

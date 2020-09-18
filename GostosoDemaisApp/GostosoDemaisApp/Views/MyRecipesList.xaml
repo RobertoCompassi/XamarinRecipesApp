@@ -4,23 +4,26 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:models="clr-namespace:GostosoDemaisApp.Models"
     x:Class="GostosoDemaisApp.Views.MyRecipesList"
     Title="Minhas Receitas"
-    BackgroundColor="#f4f4f4"> 
-    <Grid Margin="15">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*"/>
+    BackgroundColor="#f4f4f4">
 
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"></RowDefinition>
-        </Grid.RowDefinitions>
+    <StackLayout
+        Orientation="Vertical"
+        Margin="15">
 
-        <Button x:Name="btnSearch" Text="Consultar"   CornerRadius="5" Grid.Row="0" Grid.Column="0" ></Button>
-        <Button x:Name="btnRegister" Text="Cadastrar"   CornerRadius="5" Grid.Row="0" Grid.Column="1" Clicked="btnRegister_Clicked"></Button>
+        <Button
+            x:Name="btnRegister"
+            Text="VER RECEITAS ONLINE"
+            CornerRadius="5"
+            BackgroundColor="#2c84f0" 
+                TextColor="#fff"
+                FontAttributes="Bold"
+                FontSize="18"
+                Margin="0, 0, 0 ,10"
+            Clicked="btnRegister_Clicked"></Button>
 
-        <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand">
+        <StackLayout  HorizontalOptions="FillAndExpand">
             <Label
-                Text="Receitas Salvas"
+                Text="Minhas Receitas Salvas"
                 HorizontalTextAlignment="Center"
                 HorizontalOptions="FillAndExpand"
                 TextColor="#000"
@@ -58,29 +61,40 @@
                                 <StackLayout
                                     Orientation="Horizontal">
                                     <Image Source="cook.png"
-                                           WidthRequest="60"/>
+                                           WidthRequest="60"
+                                           Margin="0,5,0,10"
+                                           VerticalOptions="StartAndExpand"/>
                                     <StackLayout
                                     Orientation="Vertical"
                                     HorizontalOptions="StartAndExpand"
                                     VerticalOptions="FillAndExpand">
                                         <Label
-                                        FontSize="22"
+                                        FontSize="17"
+                                        FontAttributes="Bold"
                                         TextColor="#000"
                                         Text="{Binding Name}"
                                         HorizontalOptions="FillAndExpand"
                                         />
                                         <Label
-                                        FontSize="22"
+                                        FontSize="14"
                                         TextColor="#000"
-                                        Text="Cachorro"
+                                        Text="{Binding Ingredients}"
                                         />
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="17"
+                                            TextColor="Black"
+                                            IsVisible="{Binding IsFavorite}"
+                                            Text="⭐ RECEITA FAVORITA!"></Label>
+                                
                                     </StackLayout>
                                 </StackLayout>
+                                
                             </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-    </Grid>
+    </StackLayout>
 </ContentPage>
