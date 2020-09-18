@@ -15,7 +15,7 @@ androidsdkpath=/users/robertocompassi/library/developer/xamarin/android-sdk-maco
 androidndkpath=
 javasdkpath=/users/robertocompassi/library/developer/xamarin/jdk/microsoft_dist_openjdk_8.0.25/
 androidsequencepointsmode=none
-xamarinandroidversion=10.3.1-4
+xamarinandroidversion=11.1.0-3
 monosymbolarchive=false
 androiduselatestplatformsdk=false
 targetframeworkversion=v9.0
@@ -24,5 +24,9 @@ androidgeneratejnimarshalmethods=false
 os=unix
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=637357036165249462
+_nugetassetstimestamp=637358980034361704
 typemapkind=strings-asm
+androidsupportedabis=arm64-v8a
+armeabi-v7a
+x86
+x86_64

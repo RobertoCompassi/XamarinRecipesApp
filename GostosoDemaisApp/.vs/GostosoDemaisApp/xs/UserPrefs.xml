@@ -1,6 +1,21 @@
 ﻿<Properties StartupConfiguration="{8CE3391D-0048-474F-8F4E-E1B35568A7C6}|Default">
-  <MonoDevelop.Ide.ItemProperties.GostosoDemaisApp FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.GostosoDemaisApp.Android FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
+          <Node name="GostosoDemaisApp" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.GostosoDemaisApp.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.192.168.15.14:5555" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/robertocompassi/Documents/projetos/XamarinRecipesApp/GostosoDemaisApp/GostosoDemaisApp/Views/MyRecipesList.xaml.cs" relfile="GostosoDemaisApp/Views/MyRecipesList.xaml.cs" line="35" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.GostosoDemaisApp.iOS FirstBuild="True" />
 </Properties>
