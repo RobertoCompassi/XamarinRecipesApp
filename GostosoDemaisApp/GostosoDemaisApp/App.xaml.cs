@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using GostosoDemaisApp.Data;
+using GostosoDemaisApp.Models;
 using GostosoDemaisApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

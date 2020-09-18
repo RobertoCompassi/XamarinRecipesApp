@@ -13,6 +13,8 @@ namespace GostosoDemaisApp.ViewModels
             SubmitCommand = new Command(OnSubmit);
         }
 
+        public Action ShowErroEmptyEmail;
+        public Action ShowErroEmptyPassword;
         public Action ShowError;
         public Action ShowInvalidAccount;
         public Action EnterApp;
@@ -47,28 +49,36 @@ namespace GostosoDemaisApp.ViewModels
             {
                 if (!String.IsNullOrEmpty(email))
                 {
-                    bool existEmail = false;
-                    var emailsPresent = await App.AccountsDatabase.GetAllAsync();
-                    emailsPresent.ForEach(e =>
+                    if(password != null && password.Length >= 3)
                     {
-                        // verifica se existe o email informado na lista
-                        if (e.Email == email && password == "123")
+                        bool existEmail = false;
+                        var emailsPresent = await App.AccountsDatabase.GetAllAsync();
+                        emailsPresent.ForEach(e =>
                         {
-                            existEmail = true;
-                        }
-                    });
+                            // verifica se existe o email informado na lista
+                            if (e.Email == email && password == "123")
+                            {
+                                existEmail = true;
+                            }
+                        });
 
-                    // se a conta existe e confere com a senha redireciona para a lista de receitas
-                    if (existEmail)
+                        // se a conta existe e confere com a senha redireciona para a lista de receitas
+                        if (existEmail)
+                        {
+                            EnterApp();
+                        }
+                        else
+                        {
+                            this.ShowInvalidAccount();
+                        }
+                    }
+                    else
                     {
-                        EnterApp();
-                    } else
-                    {
-                        this.ShowInvalidAccount();
+                        this.ShowErroEmptyPassword();
                     }
                 } else
                 {
-                    // email vazio
+                    this.ShowErroEmptyEmail();
                 }
             }
             catch (Exception ex)

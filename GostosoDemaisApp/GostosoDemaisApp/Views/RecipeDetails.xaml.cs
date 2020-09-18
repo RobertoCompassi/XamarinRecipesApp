@@ -12,10 +12,15 @@ namespace GostosoDemaisApp.Views
         public RecipeDetails(Recipe recipeSelected)
         {
             InitializeComponent();
+            this.GetRecipe(recipeSelected);
+        }
 
+
+        public async void GetRecipe(Recipe recipeSelected)
+        {
             if (recipeSelected != null)
-            {
-                recipe = recipeSelected;
+            {   
+                recipe = await App.RecipesDatabase.GetAsync(recipeSelected.Id);
                 this.titleRecipe.Text = recipe.Name;
                 this.textIngredients.Text = FormatRecipe.FormatIngredients(recipe.Ingredients, null);
                 this.textSteps.Text = FormatRecipe.FormatIngredients(recipe.Steps, null);
@@ -31,7 +36,6 @@ namespace GostosoDemaisApp.Views
                     this.btnChangeFavorite.BackgroundColor = Color.Blue;
                 }
             }
-            
         }
         
 

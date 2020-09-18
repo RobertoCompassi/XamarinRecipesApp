@@ -15,6 +15,8 @@ namespace GostosoDemaisApp.Views
 
             vm.ShowInvalidAccount += () => DisplayAlert("Conta Inválida", "A conta não existe ou senha incorreta, verifique os dados.", "Continuar");
             vm.ShowError += () => DisplayAlert("Erro", "Erro ao tentar verificar o login.", "Continuar");
+            vm.ShowErroEmptyEmail += () => DisplayAlert("Email em branco", "Por favor, informe um e-mail valído.", "OK");
+            vm.ShowErroEmptyPassword += () => DisplayAlert("Verifique a senha", "Verifique se a senha foi digitada corretamente, deve conter pelo menos 3 caracteres.", "OK");
 
             vm.EnterApp += async () =>
             {

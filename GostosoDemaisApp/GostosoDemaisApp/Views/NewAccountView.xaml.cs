@@ -11,7 +11,6 @@ namespace GostosoDemaisApp.Views
         {
             var vm = new NewAccountViewModel();
             this.BindingContext = vm;
-            vm.ShowInvalidDomainEmail += () => DisplayAlert("Erro", "Erro ao tentar criar a conta", "Continuar");
             vm.ShowInvalidDomainEmail += () => DisplayAlert("Email não permitido", "Só é possivel cadastrar com e-mail do dominio @senac.edu.br.", "Continuar");
             vm.ShowInvalidRegexEmail += () => DisplayAlert("E-mail inválido", "Por favor, informe um e-mail valído.", "Continuar");
             vm.ShowExistEmail += () => DisplayAlert("E-mail já existe!", "O e-mail informado já possui cadastro, por favor informe um e-mail diferente.", "Continuar");
